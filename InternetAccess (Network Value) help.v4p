@@ -1,0 +1,97 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.1.dtd" >
+   <PATCH nodename="C:\Users\jens\plugins\InternetAccessNode\InternetAccess (Network Value) help.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="14670" top="525" width="5595" height="4590">
+   </BOUNDS>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="225" top="225" width="5100" height="450">
+   </BOUNDS>
+   <BOUNDS type="Box" left="225" top="225" width="5100" height="450">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|InternetAccess (Network Value)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" visible="1" values="14">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="225" top="600" width="5100" height="600">
+   </BOUNDS>
+   <BOUNDS type="Box" left="225" top="600" width="5100" height="600">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|Checks if any internet connection is available|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   </NODE>
+   <PACK Name="addonpack" Version="33.0.0">
+   </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="7" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="270" top="2790" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="270" top="2790" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="11" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1530" top="2700" width="1860" height="390">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1530" top="2700" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="|26.09.2014 18:40:34|">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="12" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="285" top="1440" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="285" top="1440" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <NODE systemname="Renderer (TTY)" nodename="Renderer (TTY)" componentmode="InAWindow" id="13">
+   <BOUNDS type="Node" left="2595" top="1770" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2595" top="1770" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="750" top="1335" width="11520" height="5085">
+   </BOUNDS>
+   </NODE>
+   <NODE id="8" nodename="InternetAccess (Network Value)" componentmode="Hidden" systemname="InternetAccess (Network Value)" filename="InternetAccess.csproj">
+   <BOUNDS type="Node" left="270" top="1950" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="270" top="1950" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Internet Connection" visible="1">
+   </PIN>
+   <PIN pinname="Last Time Checked" visible="1">
+   </PIN>
+   <PIN pinname="Interval" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Interval">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Last Time Checked" dstnodeid="11" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Internet Connection" dstnodeid="7" dstpinname="Y Input Value">
+   </LINK>
+   </PATCH>
