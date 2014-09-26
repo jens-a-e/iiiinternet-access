@@ -43,22 +43,40 @@
       <Lcid>0</Lcid>
       <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
+      <Private>True</Private>
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="SlimDX" />
+    <Reference Include="SlimDX">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.Composition.Codeplex" />
+    <Reference Include="System.ComponentModel.Composition.Codeplex">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="VVVV.Core" />
-    <Reference Include="VVVV.PluginInterfaces" />
-    <Reference Include="VVVV.Utils" />
-    <Reference Include="VVVV.Utils3rdParty" />
+    <Reference Include="VVVV.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VVVV.PluginInterfaces">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VVVV.Utils">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VVVV.Utils3rdParty">
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="InternetAccessNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="InternetAccess %28Network Value%29 help.v4p">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>
